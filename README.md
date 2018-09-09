@@ -1,7 +1,5 @@
 # pyswiss
-treat s3 the same way youd treat sqlite. put/get python objects in s3.
-
-warning: this is a proof of concept and should not be used in production.
+treat s3 as a python object store.
 
 ## example
 we want to save `v`, an object.
