@@ -1,7 +1,7 @@
 import pickle
 import boto3
 
-class Pyswiss(object):
+class PySwiss(object):
     def __init__(self):
         self.client = boto3.client('s3')
     

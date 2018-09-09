@@ -1,8 +1,10 @@
 # pyswiss
-easily put/get python objects in s3, no fuss.
+treat s3 the same way youd treat sqlite. put/get python objects in s3.
+
+warning: this is a proof of concept and should not be used in production.
 
 ## example
-we want to save `v`, an object.
+we want to save `vin`, an object.
 ```python
 class Person():
     def __init__(self, name):
@@ -10,13 +12,13 @@ class Person():
         
 v = Person("vin")
 ```
-lets save it with pyswiss.
+to put an object, do
 ```python
-from pyswiss import Pyswiss
-client = Pyswiss()
+from pyswiss import PySwiss
+client = PySwiss()
 client.put(v, "mynameisvinn", "obj")  # use your own bucket/keys
 ```
-retrieve python object.
+to get an object, do
 ```python
 my_object = client.get("mynameisvinn", "obj")
 print(my_object.name)  # prints "vin"
