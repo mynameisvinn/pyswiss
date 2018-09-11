@@ -27,4 +27,4 @@ class PySwiss(object):
             return pickle.loads(new_pickled_obj)
         except Exception as e:
             # print(e)
-            print('Error getting object {} from bucket {}. Make sure they exist and your bucket is in the same region as this function.'.format(key, bucket))
+            print('Error getting object {} from bucket {}. Make sure they exist and your bucket is in the same region as this function.'.format(key, self.bucket))
